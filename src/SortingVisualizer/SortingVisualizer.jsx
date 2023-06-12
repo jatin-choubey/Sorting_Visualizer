@@ -11,7 +11,7 @@ export default class SortingVisualizer extends React.Component {
 
     this.state = {
       array: [],
-      animationSpeed: 100, // Initial animation speed value
+      animationSpeed: 50, // Initial animation speed value
       NUMBER_OF_ARRAY_BARS: 100,
     };
   }
@@ -76,6 +76,124 @@ export default class SortingVisualizer extends React.Component {
 
     return (
       <div className="container">
+        <div className="elements">
+          <div className="custom-slider1">
+            <span class="span">Speed </span>
+            <input
+              className="custom-slider"
+              type="range"
+              min="1"
+              max="500"
+              value={animationSpeed}
+              onChange={this.handleSpeedChange}
+            />
+            <div class="slider-label"> Speed: {animationSpeed}</div>
+          </div>
+          <div>
+            <div className="custom-slider2">
+              <span class="span"> Array Size </span>
+              <input
+                className="custom-slider"
+                type="range"
+                min="2"
+                max="120"
+                value={NUMBER_OF_ARRAY_BARS}
+                onChange={this.handleArrayBarChange}
+              />
+              <div class="slider-label2">
+                Size : {NUMBER_OF_ARRAY_BARS} Bars
+              </div>
+            </div>
+            <br />
+            <button onClick={() => this.resetArray()}>
+              Generate New Array
+            </button>
+            <button onClick={() => this.mergeSort()}>Merge Sort</button>
+          </div>
+        </div>
+        <div className="nums">
+          <div className="block">
+            500________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            480________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            460________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            440________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            420________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            400________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            380________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            360________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            340________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            320________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            300________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            280________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            260________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            240________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            220________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            200________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            180________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            160________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            140________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            120________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            100________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            80_________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            60_________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            40_________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            20_________________________________________________________________________________________________________________________
+          </div>
+          <div className="block">
+            ....0__________________________________________________________________________________________________________________________
+          </div>
+        </div>
+        <div className="line"></div>
+        <div className="l2"></div>
+
         <div className="array-container">
           {array.map((value, idx) => (
             <div
@@ -87,44 +205,9 @@ export default class SortingVisualizer extends React.Component {
               }}
             ></div>
           ))}
-          <br />
-          <input
-            className="custom-slider"
-            type="range"
-            min="1"
-            max="500"
-            value={animationSpeed}
-            onChange={this.handleSpeedChange}
-          />
-          <input
-            // className="custom-slider"
-            type="range"
-            min="2"
-            max="120"
-            value={NUMBER_OF_ARRAY_BARS}
-            onChange={this.handleArrayBarChange}
-          />
-          <br />
-          <button onClick={() => this.resetArray()}>Generate New Array</button>
-          <button onClick={() => this.mergeSort()}>Merge Sort</button>
         </div>
+        {/* elements */}
       </div>
     );
   }
 }
-
-// From https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
-// function randomIntFromInterval(min, max) {
-//   // min and max included
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
-
-// function arraysAreEqual(arrayOne, arrayTwo) {
-//   if (arrayOne.length !== arrayTwo.length) return false;
-//   for (let i = 0; i < arrayOne.length; i++) {
-//     if (arrayOne[i] !== arrayTwo[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
