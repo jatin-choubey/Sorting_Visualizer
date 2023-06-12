@@ -1,3 +1,15 @@
+# Sorting Visualizer
+
+https://github.com/jatin-choubey/Sorting_Visualizer/assets/89119355/f54f7222-2d9d-47f6-a9f4-042012610bbf
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
